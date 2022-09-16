@@ -14,11 +14,35 @@ const feeling = ( state = '', action ) => {
     return state;
 }
 
+const understand = ( state = '', action ) => {
+    if (action.type === 'SET_UNDERSTANDING') {
+        return action.payload;
+    }
+    return state;
+}
+
+const support = ( state = '', action ) => {
+    if (action.type === 'SET_SUPPORT') {
+        return action.payload;
+    }
+    return state;
+}
+
+const comments = ( state = '', action ) => {
+    if (action.type === 'SET_COMMENTS') {
+        return action.payload;
+    }
+    return state;
+}
+
 //Redux store!
 const storeInstance = createStore(
     combineReducers(
         {
             feeling,
+            understand,
+            support,
+            comments,
         }
     ),
     applyMiddleware(logger)

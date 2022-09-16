@@ -3,6 +3,9 @@ import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import Feeling from '../Feeling/Feeling.jsx';
+import Understanding from '../Understanding/Understanding.jsx';
+import Support from '../Support/Support';
+import Comments from '../Comments/Comments';
 
 function App() {
 
@@ -17,6 +20,15 @@ function App() {
       <button><Link to='/feeling'>Add New Feedback</Link></button>
         <Route exact path={'/feeling'}>
             <Feeling />
+        </Route>
+        <Route exact path={'/understand'}>
+            <Understanding />
+        </Route>
+        <Route exact path={'/support'}>
+            <Support />
+        </Route>
+        <Route exact path={'/comments'}>
+            <Comments />
         </Route>
       </Router>
     </div>
