@@ -10,15 +10,15 @@ const Comments = () => {
     const dispatch = useDispatch();
 
     const handleChange = (event) => {
-        dispatch({ type: 'SET_UNDERSTANDING', payload: event.target.value });
+        dispatch({ type: 'SET_COMMENTS', payload: event.target.value });
     }
 
     return (
         <>
-            <h3>How well are you understanding the content?</h3>
-            <h5>0 being bad and 5 being Great!</h5>
-            <input onChange={handleChange} type='number' placeholder='0' required='required' min={0} max={5}></input>
-            <button onClick={() => history.push('/support')}>Next</button>
+            <h3>Is there anything else you would like us to know?</h3>
+            <h5>Place additional comments here:</h5>
+            <input onChange={handleChange} type='text' placeholder='Comments'></input>
+            <button onClick={() => history.push('/review')}>Next</button>
         </>
     )
 }
