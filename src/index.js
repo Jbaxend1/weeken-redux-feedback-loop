@@ -10,28 +10,40 @@ import logger from 'redux-logger';
 const feeling = ( state = '', action ) => {
     if (action.type === 'SET_FEELING') {
         return action.payload;
+    } else if (action.type === 'CLEAR_ALL') {
+        return '';
     }
+
     return state;
 }
 
 const understand = ( state = '', action ) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
+    } else if (action.type === 'CLEAR_ALL') {
+        return '';
     }
+
     return state;
 }
 
 const support = ( state = '', action ) => {
     if (action.type === 'SET_SUPPORT') {
         return action.payload;
+    } else if (action.type === 'CLEAR_ALL') {
+        return '';
     }
+
     return state;
 }
 
 const comments = ( state = '', action ) => {
     if (action.type === 'SET_COMMENTS') {
         return action.payload;
+    } else if (action.type === 'CLEAR_ALL') {
+        return '';
     }
+    
     return state;
 }
 
