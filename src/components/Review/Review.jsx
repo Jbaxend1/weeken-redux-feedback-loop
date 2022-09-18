@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
+import { Button } from "@mui/material";
 
 const Review = () => {
 
@@ -25,7 +26,7 @@ const Review = () => {
             }
         }).then((response) => {
             dispatch({ type: 'CLEAR_ALL' });
-            history.push('/')
+            history.push('/home')
         }).catch((error) => {
             console.log(error);
             alert('Something went wrong!');
@@ -40,7 +41,7 @@ const Review = () => {
             <h5>Support: {support}</h5>
             <h5>Comments: {comments}</h5>
             
-            <button onClick={handleSubmit}>SUBMIT</button>
+            <Button onClick={handleSubmit}>SUBMIT</Button>
         </>
     )
 }

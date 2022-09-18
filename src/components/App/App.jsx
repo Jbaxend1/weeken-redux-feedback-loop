@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import Feeling from '../Feeling/Feeling.jsx';
@@ -7,6 +6,10 @@ import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Review from '../Review/Review';
+import { ListItem, ListItemButton } from '@mui/material';
+import Home from '../Home/Home'
+
+
 
 function App() {
 
@@ -15,16 +18,23 @@ function App() {
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
+        <Router>
+        <ul>
+          <ListItemButton style={{color: 'white'}}> 
+            <Link style={ { textDecoration: 'none ', color: 'white'}} to='/home'>Home</Link>
+          </ListItemButton>
+          <ListItemButton style={{color: 'white'}}> 
+            <Link style={ { textDecoration: 'none ', color: 'white'}} to='/feeling'>Start New Feedback</Link>
+          </ListItemButton>
+        </ul>
+        </Router>
       </header>
 
       <Router>
-        <ul>
-          <li>
-            <button>
-            <Link style={ { textDecoration: 'none ', color: 'black'}} to='/feeling'>Start New Feedback</Link>
-            </button>
-          </li>
-        </ul>
+        
+        <Route exact path={'/home'}>
+          <Home />
+        </Route>
         <Route exact path={'/feeling'}>
           <Feeling />
         </Route>
