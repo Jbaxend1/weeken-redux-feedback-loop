@@ -16,7 +16,7 @@ const Comments = () => {
     return (
         <>
             <h3>Is there anything else you would like us to know?</h3>
-            <h5>Place additional comments here:</h5>
+            <h5>Place any additional comments here:</h5>
             <input onChange={handleChange} type='text' placeholder='Comments'></input>
             <button onClick={() => history.push('/review')}>Next</button>
         </>

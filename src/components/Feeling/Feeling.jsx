@@ -18,11 +18,6 @@ const Feeling = () => {
     }
 
     const handleNext = (e) => {
-        // if (e.target.value === 'true') {
-        //     history.push('/understand');
-        // } else {
-        //     alert('Score Inputs Must Be Valid!');
-        // }
         history.push('/understand');
     }
 

@@ -18,21 +18,27 @@ function App() {
       </header>
 
       <Router>
-      <button><Link to='/feeling'>Add New Feedback</Link></button>
+        <ul>
+          <li>
+            <button>
+            <Link style={ { textDecoration: 'none ', color: 'black'}} to='/feeling'>Start New Feedback</Link>
+            </button>
+          </li>
+        </ul>
         <Route exact path={'/feeling'}>
-            <Feeling />
+          <Feeling />
         </Route>
         <Route exact path={'/understand'}>
-            <Understanding />
+          <Understanding />
         </Route>
         <Route exact path={'/support'}>
-            <Support />
+          <Support />
         </Route>
         <Route exact path={'/comments'}>
-            <Comments />
+          <Comments />
         </Route>
         <Route exact path={'/review'}>
-            <Review />
+          <Review />
         </Route>
       </Router>
     </div>
