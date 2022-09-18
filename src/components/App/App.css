@@ -21,3 +21,16 @@
 h4 {
   font-style: italic;
 }
+
+.warning {
+  
+  margin: auto;
+  max-height: 20px;
+  max-width: fit-content;
+  margin-top: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 8px;
+  color: red;
+  background-color: #083479;
+}
